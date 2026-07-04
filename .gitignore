@@ -1,0 +1,27 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Env & secrets
+.env
+.env.local
+
+# Local storage artifacts (operator uploads)
+storage/raw-documents/*
+storage/passport-images/*
+storage/selfies/*
+storage/generated-outputs/*
+!storage/**/.gitkeep
+
+# Vision models (downloaded)
+backend/app/vision/models/*.onnx
+
+# OS
+.DS_Store

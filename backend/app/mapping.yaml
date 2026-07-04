@@ -1,0 +1,48 @@
+# Column-name remap: domain field -> source column name in the v_* view.
+# Identity by default. When a future client DB names columns differently,
+# remap here (or adjust the v_* view body) — no code changes required.
+company:
+  id: id
+  sr: sr
+  name: name
+  archetype: archetype
+  company_type: company_type
+  activity: activity
+  activity_class: activity_class
+  risk_tier: risk_tier
+  jurisdiction: jurisdiction
+  package: package
+  visa_quota: visa_quota
+  premium: premium
+  token_issuing: token_issuing
+  preapproval_status: preapproval_status
+  status: status
+  attributes: attributes
+
+person:
+  id: id
+  company_id: company_id
+  name: name
+  role: role
+  nationality: nationality
+  dob: dob
+  pob: pob
+  passport_no: passport_no
+  passport_issue: passport_issue
+  passport_expiry: passport_expiry
+  issuing_authority: issuing_authority
+  address: address
+  poa_source: poa_source
+  poa_date: poa_date
+  ubo_pct: ubo_pct
+  is_ubo: is_ubo
+  is_signatory: is_signatory
+  attributes: attributes
+
+document_status:
+  company_id: company_id
+  doc_key: doc_key
+  source: source
+  status: status
+  filename: filename
+  extracted_fields: extracted_fields

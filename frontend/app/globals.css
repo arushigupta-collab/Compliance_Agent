@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Class-strategy dark mode (matches reference repo). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e1b33;       /* dark navy/indigo headings */
+  --muted: #6b6b85;            /* slate-violet muted text */
+  --border: #e7e7ef;
+  --surface: #f7f7fb;          /* faint cool surface */
+  --accent: #574fcf;           /* customer-portal indigo/violet */
+  --accent-hover: #4a42bd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+}
+
+html.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --surface: #111318;
+  --accent: #6d64e8;           /* lighter indigo for dark mode */
+  --accent-hover: #7d75f0;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+/* Thin scrollbars for panels */
+* {
+  scrollbar-width: thin;
+}
